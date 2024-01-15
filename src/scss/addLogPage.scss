@@ -1,0 +1,76 @@
+.addLogPageDiv {
+    width: 80%;
+    margin: auto;
+}
+
+.addLogPageH1 {
+    color: $dark-grey;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.logForm {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    color: $dark-grey;
+
+    label {
+        margin: 5px 0;
+        font-size: 1.1em;
+    }
+
+    input {
+        padding: 3px;
+        border: 1px solid $dark-grey;
+        border-radius: 4px;
+        font-family: $font;
+    }
+}
+
+#description {
+    height: 150px;
+    font-family: $font;
+    padding: 3px;
+    resize: none;
+    border: 1px solid $dark-grey;
+    border-radius: 4px;
+}
+
+.addLogButton {
+    background: $orange;
+    border: 1px solid $orange;
+    color: white;
+    height: 30px;
+    width: 120px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 5px;
+    font-size: 0.7em;
+    margin: 3px;
+    margin-top: 10px;
+
+    &:hover {
+        cursor: pointer;
+        scale: 0.8;
+    }
+}
+
+.goBackButton {
+    background: $white;
+    border: 1px solid $orange;
+    color: $orange;
+    height: 30px;
+    width: 120px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 5px;
+    font-size: 0.7em;
+    margin: 3px;
+    margin-top: 10px;
+
+    &:hover {
+        cursor: pointer;
+        scale: 0.8;
+    }
+}

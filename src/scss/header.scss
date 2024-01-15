@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid $grey;
+    margin: auto;
+}
+
+.headerContent {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.headerIcon {
+    color: $orange;
+    height: 30px;
+    width: 30px;
+}
+
+.headerH1 {
+    color: $orange;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
