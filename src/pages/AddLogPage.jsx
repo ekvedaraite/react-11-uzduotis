@@ -1,68 +1,58 @@
-import { useNavigate, useParams } from 'react-router-dom';
-import Header from '../components/Header';
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useNavigate, useParams } from 'react-router-dom'
+import Header from '../components/Header'
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 const AddLogPage = () => {
-  const { id } = useParams();
-  const navigate = useNavigate();
-
-  const [status, setStatus] = useState('');
-  const [description, setDescription] = useState('');
-  const [petName, setPetName] = useState('');
+  const { id } = useParams()
+  const navigate = useNavigate()
+  const [status, setStatus] = useState('')
+  const [description, setDescription] = useState('')
+  const [petName, setPetName] = useState('')
 
   useEffect(() => {
-    // Fetch pet details based on the ID
     const fetchPetDetails = async () => {
       try {
         const petResp = await fetch(`https://vetbee-backend.glitch.me/v1/pets/${id}`, {
           method: 'GET',
-        });
-        const petData = await petResp.json();
-        setPetName(petData.name);
+        })
+        const petData = await petResp.json()
+        setPetName(petData.name)
       } catch (error) {
-        console.error('Error fetching pet details:', error);
+        console.error('Error fetching pet details:', error)
       }
-    };
+    }
 
-    fetchPetDetails();
-  }, [id]);
+    fetchPetDetails()
+  }, [id])
 
   const handleAddLog = async () => {
+  
     try {
-      // Define an asynchronous function for the logic
-      const addLogAsync = async () => {
-        // Make a POST request to add a new log
-        const resp = await fetch(`https://vetbee-backend.glitch.me/v1/logs/${id}`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            status: status,
-            description: description,
-          }),
-        });
-
-        if (resp.ok) {
-          // Log added successfully, navigate back to the pet's log page
-          navigate(`/pet-logs/${id}`);
-        } else {
-          const data = await resp.json();
-          console.error('Failed to add log. Server response:', data);
-
-          // Log the entire response to investigate the issue
-          console.log('Full server response:', resp);
-        }
-      };
-
-      // Call the asynchronous function
-      await addLogAsync();
+      const resp = await fetch(`https://vetbee-backend.glitch.me/v1/logs`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          pet_id: id,
+          status: status,
+          description: description,
+        }),
+      })
+  
+      if (resp.ok) {
+        navigate(`/pet-logs/${id}`)
+      } else {
+        const data = await resp.json()
+        console.error('Failed to add log. Server response:', data)
+      }
     } catch (error) {
-      console.error('Error adding log:', error);
+      console.error('Error adding log:', error)
     }
-  };
-
+  }
+  
+  
   return (
     <>
       <Header />
@@ -107,7 +97,7 @@ const AddLogPage = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AddLogPage;
+export default AddLogPage

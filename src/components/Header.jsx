@@ -1,4 +1,4 @@
-import { DiReact } from "react-icons/di";
+import { DiReact } from "react-icons/di"
 
 const Header = () => {
   return (  

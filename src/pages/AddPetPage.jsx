@@ -12,8 +12,8 @@ const AddPetPage = () => {
   const isFormValid = () => {
 
     if (!petName || !petBirthday || !petEmail) {
-      alert("Please fill in all fields");
-      return false;
+      alert("Please fill in all fields")
+      return false
     }
 
     const currentDate = new Date ()
@@ -24,8 +24,8 @@ const AddPetPage = () => {
     }
 
     if (petEmail.indexOf('@') === -1) {
-      console.error("Please enter a valid email address");
-      return false;
+      console.error("Please enter a valid email address")
+      return false
     }
 
     return true
@@ -55,7 +55,6 @@ const AddPetPage = () => {
       const data = await resp.json()
 
       if(resp.ok) {
-        console.log('Pet added successfully')
         navigate('/')
       } else {
         console.error('Failed to add pet', data)

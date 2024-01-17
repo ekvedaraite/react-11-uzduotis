@@ -1,4 +1,5 @@
 .addLogPageDiv {
+    font-family: $font;
     width: 80%;
     margin: auto;
 }
@@ -10,21 +11,23 @@
 }
 
 .logForm {
+    font-family: $font;
     display: flex;
     flex-direction: column;
     width: 60%;
     color: $dark-grey;
 
     label {
+        font-family: $font;
         margin: 5px 0;
         font-size: 1.1em;
     }
 
     input {
+        font-family: $font;
         padding: 3px;
         border: 1px solid $dark-grey;
         border-radius: 4px;
-        font-family: $font;
     }
 }
 
@@ -38,6 +41,7 @@
 }
 
 .addLogButton {
+    font-family: $font;
     background: $orange;
     border: 1px solid $orange;
     color: white;
@@ -57,6 +61,7 @@
 }
 
 .goBackButton {
+    font-family: $font;
     background: $white;
     border: 1px solid $orange;
     color: $orange;

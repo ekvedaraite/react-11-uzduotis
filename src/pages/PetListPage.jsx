@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import { motion } from "framer-motion";
-import Header from "../components/Header";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion"
+import Header from "../components/Header"
+import { Link } from "react-router-dom"
 
 const PetListPage = () => {
     const [pets, setPets] = useState([])

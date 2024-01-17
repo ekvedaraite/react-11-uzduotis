@@ -1,4 +1,3 @@
-// App.jsx
 import './scss/styles.scss'
 import AddPet from './pages/AddPetPage'
 import PetLogsPage from './pages/PetLogsPage'

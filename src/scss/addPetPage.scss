@@ -3,6 +3,7 @@
     display: block;
     margin: auto;
     margin-top: 40px;
+    font-family: $font;
 }
 
 .addPetPageH1 {
@@ -20,10 +21,12 @@
     label {
         color: $dark-grey;
         margin: 2px 0;
+        font-family: $font;
     }
 
     input {
         padding: 2px;
+        font-family: $font;
 
         &:hover {
             cursor: pointer;
@@ -32,6 +35,7 @@
 }
 
 .addPetButton {
+    font-family: $font;
     background: $orange;
     border: 1px solid $orange;
     color: $white;
@@ -40,7 +44,7 @@
     border-radius: 4px;
     text-transform: uppercase;
     padding: 5px;
-    font-size: 0.7em;
+    font-size: 0.8em;
     margin-top: 10px;
 
     &:hover {

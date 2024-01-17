@@ -1,0 +1,62 @@
+@media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .headerContent {
+      width: 90%;
+    }
+  
+    .petListPageDiv,
+    .petLogsPageDiv,
+    .addPetPageDiv,
+    .addLogPageDiv {
+      width: 90%;
+    }
+  
+    .cardContainer {
+      .card {
+        width: 100%;
+      }
+    }
+  
+    .logCard {
+      width: 100%;
+    }
+  
+    .form,
+    .logForm {
+      width: 100%;
+    }
+  
+    .headerH1,
+    .petListPageH1,
+    .petLogsPageH1,
+    .addPetPageH1,
+    .addLogPageH1 {
+      font-size: 1.2em;
+    }
+  
+    .addPetButton,
+    .addLogButton,
+    .goBackButton,
+    .viewLogBtn,
+    .deleteBtn {
+      width: 60%;
+    }
+
+    .addPetButton{
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .petLogsPageH1 {
+        width: 100%;
+    }
+
+    .petLogsPageButtons {
+        display: inline-block;
+        right: 0;
+    }
+  }
+  
